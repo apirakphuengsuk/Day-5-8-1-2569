@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter App'),
+      ),
+      body: Center(
+        child: Text('Hello World'),
+      ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home),
+        label: 'home'),
+        BottomNavigationBarItem(icon: Icon(Icons.wifi),
+        label: 'wifi'),
+        BottomNavigationBarItem(icon: Icon(Icons.person),
+        label: 'profile')
+      ],
+      ),
+    );
+  }
+}
